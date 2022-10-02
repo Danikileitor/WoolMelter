@@ -1,0 +1,25 @@
+main: dnk.woolmelter.Main
+name: WoolMelter
+version: 1.0
+author: Danikileitor
+description: Allows you to melt wool to get their dye!
+api-version: 1.19
+load: POSTWORLD
+prefix: WM
+loadbefore: [CampfireRecipes]
+commands:
+  wmupdate:
+    description: Update this plugin if there is an update available.
+    aliases: wmupdate
+    usage: /wmupdate
+    permission: wm.update
+    permission-message: You don't have the wm.update permission.
+permissions:
+  wm.update:
+    description: Access to the /wmupdate command.
+    default: op
+  wm.*:
+    description: Access to all commands.
+    default: op
+    children:
+      wm.update: true
